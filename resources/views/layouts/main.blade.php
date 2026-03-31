@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @foreach ($properties->take(1) as $property)
-      <!-- <link rel="icon" href="{{ asset('storage/' . $property->image) }}"> -->
-      <link rel="icon" href="{{ asset('storage/' . $property->image) }}">
+      <!-- <link rel="icon" href="{{ Storage::url($property->image) }}"> -->
+      <link rel="icon" href="{{ Storage::url($property->image) }}">
     @endforeach   
 
     
@@ -24,7 +24,7 @@
     <style> 
       .hero {
         @foreach ($propertiez->take(1) as $property)
-          background-image: url('{{ asset('storage/' . $property->image) }}');
+          background-image: url('{{ Storage::url($property->image) }}');
         @endforeach
       }
       .pdfobject-container { 

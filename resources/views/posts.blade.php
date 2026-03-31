@@ -30,7 +30,7 @@
         <div class="card my-4 featured-article-card">
             <div class="featured-article-media">
                 <span class="article-card-category"><a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a></span>
-                <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="{{ $posts[0]->category->name }}" class="img-fluid featured-article-image">
+                <img src="{{ Storage::url($posts[0]->image) }}" alt="{{ $posts[0]->category->name }}" class="img-fluid featured-article-image">
             </div>
             
             <div class="card-body featured-article-body text-center">
@@ -54,7 +54,7 @@
                         <div class="card-effect article-card">
                             <div class="article-card-media">
                                 <span class="article-card-category"><a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></span>
-                                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" >
+                                <img src="{{ Storage::url($post->image) }}" alt="{{ $post->category->name }}" >
                             </div>
 
                             <div class="card-body article-card-body">
@@ -83,4 +83,3 @@
         
 </div>
 @endsection
-

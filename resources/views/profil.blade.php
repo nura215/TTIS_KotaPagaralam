@@ -15,7 +15,7 @@
                             <div class="col-lg-7">
                                 <div class="profile-visual-wrap">
                                     @if (!empty($profileIcons) && $profileIcons->count())
-                                        <img src="{{ asset('storage/' . $profileIcons->first()->image) }}" alt="Icon Profile" class="profile-visual-image">
+                                        <img src="{{ Storage::url($profileIcons->first()->image) }}" alt="Icon Profile" class="profile-visual-image">
                                     @else
                                         <img src="/img/cyber-security-illustration.png" alt="Cyber Security Team" class="profile-visual-image">
                                     @endif

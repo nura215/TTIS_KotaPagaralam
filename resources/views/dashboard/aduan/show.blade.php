@@ -59,10 +59,10 @@
                             <textarea class="form-control" rows="6" readonly>{{ $aduan->deskripsi }}</textarea>
                         </div>
                         <div class="col-md-6">
-                            <a href="{{ asset('storage/' . $aduan->file_nda) }}" target="_blank" class="btn btn-outline-primary w-100">Lihat File NDA</a>
+                            <a href="{{ Storage::url($aduan->file_nda) }}" target="_blank" class="btn btn-outline-primary w-100">Lihat File NDA</a>
                         </div>
                         <div class="col-md-6">
-                            <a href="{{ asset('storage/' . $aduan->file_poc) }}" target="_blank" class="btn btn-outline-primary w-100">Lihat File PoC</a>
+                            <a href="{{ Storage::url($aduan->file_poc) }}" target="_blank" class="btn btn-outline-primary w-100">Lihat File PoC</a>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@
                 </form>  
             @endcan           
               <div style="max-height: 400px; overflow:hidden">
-                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3"> 
+                <img src="{{ Storage::url($post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mt-3"> 
               </div>
            
             <article class="my-3 fs-6">

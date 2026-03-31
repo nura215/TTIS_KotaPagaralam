@@ -10,7 +10,7 @@
                 <p>By <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
 
                 <div style="max-height: 400px; overflow:hidden">
-                    <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid"> 
+                    <img src="{{ Storage::url($post->image) }}" alt="{{ $post->category->name }}" class="img-fluid"> 
                 </div>
   
                 <article class="my-4 fs-6">

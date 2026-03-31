@@ -30,7 +30,7 @@
                 <td>{{ $property->property }}</td>
                 <td>{{ $property->name }}</td>
                 <td>
-                  <img src="{{ asset('storage/' . $property->image) }}" alt="{{ $property->name }}" class="img-fluid col-sm-5">
+                  <img src="{{ Storage::url($property->image) }}" alt="{{ $property->name }}" class="img-fluid col-sm-5">
                 </td>
                 <td>
                   <a href="/dashboard/properties/{{ ($property->slug) }}/edit" class="badge bg-warning text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><span data-feather="edit"></span></a>

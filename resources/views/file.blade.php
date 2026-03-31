@@ -17,7 +17,7 @@
 
     <script nonce="{{ csp_nonce() }}" src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js" integrity="sha512-g16L6hyoieygYYZrtuzScNFXrrbJo/lj9+1AYsw+0CYYYZ6lx5J3x9Yyzsm+D37/7jMIGh0fDqdvyYkNWbuYuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     @foreach ($files->take(1) as $file)
-      <script nonce="{{ csp_nonce() }}">PDFObject.embed("{{ asset('storage/' . $file->path) }}", "#my_pdf");</script>
+      <script nonce="{{ csp_nonce() }}">PDFObject.embed("{{ Storage::url($file->path) }}", "#my_pdf");</script>
     @endforeach 
             
 @endsection

@@ -83,7 +83,7 @@
                             <div class="card-effect article-card">
                                 <div class="article-card-media">
                                     <span class="article-card-category"><a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></span>
-                                    <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}">
+                                    <img src="{{ Storage::url($post->image) }}" alt="{{ $post->category->name }}">
                                 </div>
 
                                 <div class="card-body article-card-body">

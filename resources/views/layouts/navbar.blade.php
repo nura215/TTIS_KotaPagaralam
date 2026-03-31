@@ -6,7 +6,7 @@
       @endphp
       <a class="navbar-brand d-flex align-items-center" href="/">
         @foreach ($properties->take(1) as $property)
-          <img class="logo" src="{{ asset('storage/'.$property->image) }}" alt="{{ $property->property }}">
+          <img class="logo" src="{{ Storage::url($property->image) }}" alt="{{ $property->property }}">
         @endforeach
         <span class="brand-title">Kota Pagar Alam</span>
       </a>

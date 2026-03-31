@@ -25,7 +25,7 @@
                             <span class="hero-orbit-node hero-node-bottom"></span>
                             <span class="hero-orbit-node hero-node-left"></span>
                             @if (!empty($dashboardIcons) && $dashboardIcons->count())
-                                <img src="{{ asset('storage/' . $dashboardIcons->first()->image) }}" alt="Icon Dasbor" class="hero-visual-image">
+                                <img src="{{ Storage::url($dashboardIcons->first()->image) }}" alt="Icon Dasbor" class="hero-visual-image">
                             @endif
                         </div>
                     </div>
@@ -34,4 +34,3 @@
         </div>
     </div>
     <!-- End Hero Section -->
-

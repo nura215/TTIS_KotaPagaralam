@@ -71,7 +71,7 @@ class DashboardPostController extends Controller
         }
 
         if($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-image');
+            $validatedData['image'] = $request->file('image')->store('post-image', 'public');
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -147,9 +147,9 @@ class DashboardPostController extends Controller
 
         if($request->file('image')) {
             if($post->image){
-                Storage::delete($post->image);
+                Storage::disk('public')->delete($post->image);
             }
-            $validatedData['image'] = $request->file('image')->store('post-image');
+            $validatedData['image'] = $request->file('image')->store('post-image', 'public');
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -170,7 +170,7 @@ class DashboardPostController extends Controller
     {
         if(auth()->user()->is_admin){
             if($post->image) {
-                Storage::delete($post->image);
+                Storage::disk('public')->delete($post->image);
             }
             Post::destroy($post->id);
 

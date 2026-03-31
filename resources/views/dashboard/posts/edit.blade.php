@@ -45,7 +45,7 @@
             <div class="mb-3">
               <label for="image" class="form-label">Post Image</label>
               @if ($post->image)
-                <img src="{{ asset('storage/' . $post->image) }}" class="img-preview img-fluid mb-3 col-sm-8 d-block">  
+                <img src="{{ Storage::url($post->image) }}" class="img-preview img-fluid mb-3 col-sm-8 d-block">  
               @else     
                 <img class="img-preview img-fluid mb-3 col-sm-8">
               @endif
