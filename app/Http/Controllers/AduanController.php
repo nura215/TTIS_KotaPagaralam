@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
 
 class AduanController extends Controller
 {
-    private const ADMIN_EMAIL = 'nuraininenden15@gmail.com';
+    private const ADMIN_EMAIL = 'pagaralam_csirt@pagaralamkota.go.id';
 
     public function home()
     {
